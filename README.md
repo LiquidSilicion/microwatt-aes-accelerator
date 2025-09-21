@@ -2,7 +2,9 @@
 ## The Challenge
 AES (Advanced Encryption Standard) is a computationally intensive algorithm involving many shifts, XORs, and table lookups. Performing these operations in software on a minimalistic CPU like Microwatt can be a major bottleneck for applications requiring secure communication or data storage. By moving the core cryptographic operations into dedicated silicon logic within the CPU, we can perform them in a single clock cycle, dramatically increasing throughput and reducing energy consumption per encryption.
 
-<img width="1975" height="3743" alt="aes1" src="https://github.com/user-attachments/assets/0849bb27-d4bc-4b27-8dec-f87998df0bba" />
+# High-Level System Architecture
+
+<img width="529" height="1004" alt="aes" src="https://github.com/user-attachments/assets/de29b95d-4e7f-4688-b1dc-60c14a8e6186" />
 
 ## Key Components:
 
@@ -15,6 +17,34 @@ AES (Advanced Encryption Standard) is a computationally intensive algorithm invo
 * **AES Round Engine**: Your custom Verilog/VDHL module that performs the encryption round.
 
 * **Verification System**: The critical loop that checks the hardware output against known correct values.
+
+# Detailed Hardware Integration Flow
+
+<img width="603" height="949" alt="aes3" src="https://github.com/user-attachments/assets/796fafab-ea50-4162-ac46-2814ba3be6a9" />
+
+## Key Components:
+
+* **Opcode Decoding**: The first step is recognizing your new instruction.
+
+* **Register File Access**: The POWER ISA uses 64-bit General Purpose Registers (GPRs). Since AES uses 128-bit data, your instruction must read from two source registers (e.g., SRa and SRa+1) and write to two destination registers (e.g., SRt and SRt+1).
+
+* **AES Round Engine**: This is a purely combinatorial block. Its output is ready in the same clock cycle.
+
+* **Bypass Standard Logic**: The control logic must multiplex between the standard ALU and your new AES engine for the result.
+
+# Verification and Benchmark
+
+<img width="3446" height="2117" alt="aes" src="https://github.com/user-attachments/assets/19b1ab6c-fc71-4d3b-9e27-3eb848c495ec" />
+
+## Key Components:
+
+* **Golden Model**: A trusted software implementation used to generate correct answers.
+
+* **Device Under Test (DUT)**: Your modified Microwatt core running the new program.
+
+* **Comparison**: The final step to ensure functional correctness. Any mismatch requires debugging the hardware.
+
+* **Cycle Counting**: The simulator (verilator) can report how many cycles it took to complete a task. Comparing these counts gives you your performance benchmark.
 
 ## Project Goals & Expected Outcomes
 * **ISA Extension:**: Define and implement new custom instructions in the Microwatt core (e.g., aesenc for an AES round).
