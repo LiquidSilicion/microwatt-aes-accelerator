@@ -6,15 +6,15 @@ AES (Advanced Encryption Standard) is a computationally intensive algorithm invo
 
 ## Key Components:
 
-Software Application: The C code that calls the encryption function.
+* **Software Application**: The C code that calls the encryption function.
 
-Inline Assembly: The macros you write that contain the custom instructions (aesenc).
+* **Inline Assembly**: The macros you write that contain the custom instructions (aesenc).
 
-CPU Pipeline: The modified parts of the Microwatt core (Decode, Execute, Writeback).
+* **CPU Pipeline**: The modified parts of the Microwatt core (Decode, Execute, Writeback).
 
-AES Round Engine: Your custom Verilog/VDHL module that performs the encryption round.
+* **AES Round Engine**: Your custom Verilog/VDHL module that performs the encryption round.
 
-Verification System: The critical loop that checks the hardware output against known correct values.
+* **Verification System**: The critical loop that checks the hardware output against known correct values.
 
 ## Project Goals & Expected Outcomes
 * **ISA Extension:**: Define and implement new custom instructions in the Microwatt core (e.g., aesenc for an AES round).
