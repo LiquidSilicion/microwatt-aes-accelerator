@@ -1,4 +1,4 @@
-### Project Proposal
+# Project Proposal
 ## The Challenge
 AES (Advanced Encryption Standard) is a computationally intensive algorithm involving many shifts, XORs, and table lookups. Performing these operations in software on a minimalistic CPU like Microwatt can be a major bottleneck for applications requiring secure communication or data storage. By moving the core cryptographic operations into dedicated silicon logic within the CPU, we can perform them in a single clock cycle, dramatically increasing throughput and reducing energy consumption per encryption.
 
