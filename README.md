@@ -134,15 +134,22 @@ Building and Running the Baseline
 
 bash
 # Clone the repository
+```bash
 git clone https://github.com/your-username/microwatt-aes-accelerator.git
 cd microwatt-aes-accelerator
+```
 
 # Build the vanilla Microwatt simulator
+```bash
 make sim
+```
 
 # Build and run the software AES benchmark
+```bash
 cd software
 make benchmark_software
+```
+
 # Runs in simulation and reports cycle count
 License
 This project will be licensed under the same open-source license as the Microwatt project itself.
