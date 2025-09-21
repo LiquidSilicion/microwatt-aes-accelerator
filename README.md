@@ -4,7 +4,7 @@ AES (Advanced Encryption Standard) is a computationally intensive algorithm invo
 
 # High-Level System Architecture
 
-<img width="529" height="1004" alt="aes" src="https://github.com/user-attachments/assets/de29b95d-4e7f-4688-b1dc-60c14a8e6186" />
+<img width="590" height="1066" alt="aes" src="https://github.com/user-attachments/assets/9ac908d4-9009-4bc7-ab2f-7eaca8c963ae" />
 
 ## Key Components:
 
