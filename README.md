@@ -119,17 +119,8 @@ Verification Coverage: Verification is a core part of the plan, using both unit 
 
 Design Technical Merit: Adding application-specific custom instructions is a fundamental advantage of open-source silicon. This project provides a clear, measurable improvement for a critical workload.
 
-## Getting Started
-Prerequisites
-powerpc64le-linux-gnu-gcc
 
-verilator
-
-gtkwave (for viewing waveforms)
-
-Standard build tools (make, gcc, etc.)
-
-Building and Running the Baseline
+# Building and Running the Baseline
 (Instructions to be filled in as project progresses)
 
 bash
