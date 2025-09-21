@@ -33,17 +33,6 @@ Phase 2 (Oct 16 - Oct 27): Software integration. Development of the AES library 
 
 Phase 3 (Oct 28 - Nov 3): Final documentation, creation of demonstration video, and project submission. (FINAL SUBMISSION)
 
-Judge Criteria Alignment
-Project Documentation: This README is the start. Final documentation will include detailed build instructions, a block architecture diagram, and full results.
-
-Prompt Documentation: LLM prompts used for generating boilerplate code (e.g., test vectors, documentation templates) will be documented in a dedicated section.
-
-Code Quality: The HDL code will be modular, well-commented, and follow best practices. Changes to the core Microwatt code will be minimal and focused.
-
-Verification Coverage: Verification is a core part of the plan, using both unit testbenches for the AES module and full system-level checks against a software golden model.
-
-Design Technical Merit: Adding application-specific custom instructions is a fundamental advantage of open-source silicon. This project provides a clear, measurable improvement for a critical workload.
-
 # Clone the repository
 ```bash
 git clone https://github.com/your-username/microwatt-aes-accelerator.git
