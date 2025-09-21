@@ -119,11 +119,6 @@ Verification Coverage: Verification is a core part of the plan, using both unit 
 
 Design Technical Merit: Adding application-specific custom instructions is a fundamental advantage of open-source silicon. This project provides a clear, measurable improvement for a critical workload.
 
-
-# Building and Running the Baseline
-(Instructions to be filled in as project progresses)
-
-bash
 # Clone the repository
 ```bash
 git clone https://github.com/your-username/microwatt-aes-accelerator.git
