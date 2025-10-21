@@ -83,15 +83,11 @@ git clone https://github.com/your-username/microwatt-aes-accelerator.git
 cd microwatt-aes-accelerator
 ```
 
-# Build the vanilla Microwatt simulator
+# Build the vanilla Microwatt aes test simulator
 ```bash
-make sim
-```
-
-# Build and run the software AES benchmark
-```bash
-cd software
-make benchmark_software
+make sim                    # Build simulator
+make software/test_aes      # Build test program  
+./microwatt_aes test_aes    # Run test
 ```
 
 # Runs in simulation and reports cycle count
