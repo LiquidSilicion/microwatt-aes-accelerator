@@ -10,5 +10,14 @@
 //PURPOSE: Does the actual cryptographic work
 
 
-module round();
-  input [15:0]
+module aes_round(
+  input wire [127:0]state_in;
+  input wire [127:0]round_key;
+  input wire final_state;
+  output wire [127:0]state_out;
+  );
+  wire [127:0] subbytes_out;
+  wire [127:0] shiftrows_out; 
+  wire [127:0] mixcolumns_out;
+  wire [127:0] addroundkey_out;
+  
